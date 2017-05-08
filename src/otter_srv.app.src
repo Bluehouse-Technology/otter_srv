@@ -1,0 +1,20 @@
+{application, otter_srv,
+ [{description, "OpenTracing Toolkit for ERlang Server"},
+  {vsn, "0.1.0"},
+  {registered, [otter_srv_sup]},
+  {mod, { otter_srv_app, []}},
+  {applications,
+   [kernel,
+    stdlib,
+    otter_lib,
+    cowboy
+   ]},
+  {env,[
+    {server_zipkin_callback, {otter_srv_span_cb, handle}},
+    {server_zipkin_port, 19411}
+  ]},
+  {modules, []},
+  {maintainers, ["Ferenc Holzhauser", "Chandrashekhar Mullaparthi"]},
+  {licenses, ["Apache"]},
+  {links, [{"Github", "https://github.com/bluehouse-technology/otter_srv"}]}
+ ]}.
