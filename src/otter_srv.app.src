@@ -1,5 +1,5 @@
 {application, otter_srv,
- [{description, "OpenTracing Toolkit for ERlang Server"},
+ [{description, "OpenTracing Erlang Server"},
   {vsn, "0.1.0"},
   {registered, [otter_srv_sup]},
   {mod, { otter_srv_app, []}},

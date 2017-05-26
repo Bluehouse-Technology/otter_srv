@@ -10,12 +10,6 @@ compile:
 shell:
 	@${REBAR} shell
 
-ct: 
-	@${REBAR} ct --sys_config test/test_httpc.config
-	@${REBAR} ct --sys_config test/test_ibrowse.config
-
-test: ct
-
 clean:
 	@${REBAR} clean
 
